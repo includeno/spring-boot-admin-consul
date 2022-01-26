@@ -1,0 +1,11 @@
+version: '3'
+services:
+  admin-server:
+    image: includeno/admin-server-consul
+    container_name: admin-server-container
+    ports:
+      - "8080:8080"
+    environment:
+      - consul_host=${consul_host}
+      - consul_port=${consul_port}
+      - consul_service_name=admin-server-consul
