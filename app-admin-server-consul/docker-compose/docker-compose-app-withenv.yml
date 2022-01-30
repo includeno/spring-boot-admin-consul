@@ -3,8 +3,7 @@ services:
   admin-server:
     image: includeno/admin-server-consul
     container_name: admin-server-container
-    ports:
-      - "8080:8080"
+    network_mode: "host"
     environment:
       - consul_host=${consul_host}
       - consul_port=${consul_port}
